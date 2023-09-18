@@ -1,0 +1,25 @@
+{
+  "name": "twitter-diary-web",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "bun-types": "latest",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "^3.3.3"
+  },
+  "scripts": {
+    "dev": "bun --hot src/server.ts",
+    "dev:css": "bunx tailwindcss -i ./src/client/index.css -o ../twitter-diary-backend/http/assets/index.css --watch",
+    "dev:js": "bun build ./src/client/index.jsx --outdir ../twitter-diary-backend/http/assets --watch"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}
